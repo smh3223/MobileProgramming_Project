@@ -39,6 +39,7 @@ dependencies {
 
     //recyclerView
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.firebase:firebase-firestore:22.0.0'
 
     //test
     testImplementation 'junit:junit:4.13.1'
