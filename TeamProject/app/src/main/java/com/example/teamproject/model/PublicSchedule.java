@@ -2,30 +2,25 @@ package com.example.teamproject.model;
 
 import java.util.Date;
 
-public class Schedule {
+public class PublicSchedule {
 
-    private Date startDate;
-    private Date lastDate;
+    private Date ThatDate;
     private String title;
     private String contents;
 
-    public Schedule() {
+    public PublicSchedule() {
     }
 
-    public Schedule(Date startDate, Date lastDate, String title, String contents) {
-        this.startDate = startDate;
-        this.lastDate = lastDate;
+    public PublicSchedule(Date startDate, Date lastDate, String title, String contents) {
+        this.ThatDate = startDate;
         this.title = title;
         this.contents = contents;
     }
 
     public Date getStartDate() {
-        return startDate;
+        return ThatDate;
     }
 
-    public Date getLastDate() {
-        return lastDate;
-    }
 
     public String getTitle() {
         return title;
@@ -36,12 +31,9 @@ public class Schedule {
     }
 
     public void setStartDate(Date startDate) {
-        this.startDate = startDate;
+        this.ThatDate = startDate;
     }
 
-    public void setLastDate(Date lastDate) {
-        this.lastDate = lastDate;
-    }
 
     public void setTitle(String title) {
         this.title = title;
@@ -54,8 +46,7 @@ public class Schedule {
     @Override
     public String toString() {
         return "Schedule{" +
-                "startDate=" + startDate +
-                ", lastDate=" + lastDate +
+                "startDate=" + ThatDate +
                 ", title='" + title + '\'' +
                 ", contents='" + contents + '\'' +
                 '}';
