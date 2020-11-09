@@ -3,11 +3,9 @@ package com.example.teamproject;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -20,14 +18,16 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     ListView listview1;
     ArrayList<Board> board1 = new ArrayList<Board>();
+
+    ArrayDeque<Board> board2 = new ArrayDeque<Board>();
 
     Button button1;
     EditText edittext1;
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Board board = snapshot.getValue(Board.class);
                 board1.add(board);
+                board2.push(board);
                 adapter.Add(board);
                 adapter.notifyDataSetChanged();
 

@@ -6,14 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class MyAdapter extends BaseAdapter {
 
     Context context;
     ArrayList<Board> data = new ArrayList<Board>();
-
     MyAdapter(Context context)
     {
         this.context = context;
@@ -62,7 +61,8 @@ public class MyAdapter extends BaseAdapter {
         TextView textView2 = (TextView) convertView.findViewById(R.id.textView2);
         TextView textView3 = (TextView) convertView.findViewById(R.id.textView3);
 
-        Board board = data.get(position);
+        Board board = data.get(data.size()-1 - position);
+
         textView1.setText(board.getTitle());
         textView2.setText(board.getDate());
         textView3.setText(board.getContent());
