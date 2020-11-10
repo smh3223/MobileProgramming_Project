@@ -10,13 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".view.AddScheduleActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".Board.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Board.WriteActivity"></activity>
+
     </application>
 
 </manifest>

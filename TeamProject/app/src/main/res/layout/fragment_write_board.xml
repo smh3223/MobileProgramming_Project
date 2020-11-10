@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteBoard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/aaa"
+                android:layout_width="264dp"
+                android:layout_height="70dp"
+                android:ems="10"
+                android:hint="제목"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/aa"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="등록" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/dsfsa"
+            android:layout_width="match_parent"
+            android:layout_height="680dp"
+            android:ems="10"
+            android:gravity="left"
+            android:hint="내용"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+</FrameLayout>
