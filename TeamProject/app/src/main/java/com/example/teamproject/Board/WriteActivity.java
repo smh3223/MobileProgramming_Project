@@ -49,6 +49,7 @@ public class WriteActivity extends AppCompatActivity {
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
         Board board = new Board(edittext1.getText().toString(),dateform.format(date).toString(),edittext2.getText().toString(),1);
         database.child("message").push().setValue(board);
+        database.child("message").child("comment").push();
         edittext1.setText("");
         edittext2.setText("");
 

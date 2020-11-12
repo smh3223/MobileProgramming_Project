@@ -1,11 +1,14 @@
 package com.example.teamproject.Board;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.teamproject.Board.Board;
 import com.example.teamproject.R;
@@ -64,11 +67,24 @@ public class MyAdapter extends BaseAdapter {
         TextView textView2 = (TextView) convertView.findViewById(R.id.textView2);
         TextView textView3 = (TextView) convertView.findViewById(R.id.textView3);
 
-        Board board = data.get(data.size()-1 - position);
+        final Board board = data.get(data.size()-1 - position);
 
         textView1.setText(board.getTitle());
         textView2.setText(board.getDate());
         textView3.setText(board.getContent());
+
+
+        LinearLayout itemLay = (LinearLayout)convertView.findViewById(R.id.ListArea);
+        itemLay.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+
+                Toast.makeText(v.getContext(),board.getTitle().toString() + board.getContent().toString(),Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
 
         return convertView;
 
@@ -78,6 +94,8 @@ public class MyAdapter extends BaseAdapter {
     {
         data.add(b);
     }
+
+
 
 
 

@@ -31,7 +31,7 @@ public class BoardActivity extends AppCompatActivity {
     ArrayList<Board> board1 = new ArrayList<Board>();
     ArrayDeque<Board> board2 = new ArrayDeque<Board>();
 
-
+    //게시글 작성 시 제목 / 내용 / 등록 버튼
 
 
     // 게시글 작성 프래그먼트 호출
