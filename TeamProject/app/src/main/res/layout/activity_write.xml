@@ -26,6 +26,7 @@
             android:layout_width="175dp"
             android:layout_height="74dp"
             android:backgroundTint="#B9C0EF"
+
             android:text="등록" />
 
     </LinearLayout>
@@ -38,5 +39,6 @@
         android:ems="10"
         android:gravity="left"
         android:hint="내용"
-        android:inputType="textPersonName" />
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="false" />
 </LinearLayout>

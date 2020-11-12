@@ -31,6 +31,8 @@ public class WriteActivity extends AppCompatActivity {
         edittext1 = (EditText) findViewById(R.id.edittext21);
         edittext2 = (EditText) findViewById(R.id.edittext22);
 
+        edittext2.setHorizontallyScrolling(false);
+
         button1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 click1button(v);

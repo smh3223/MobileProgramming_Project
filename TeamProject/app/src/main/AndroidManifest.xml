@@ -17,7 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Board.BoardActivity"></activity>
         <activity android:name=".Board.WriteActivity"></activity>
+        <activity android:name=".Board.PostActivity"></activity>
+
 
     </application>
 

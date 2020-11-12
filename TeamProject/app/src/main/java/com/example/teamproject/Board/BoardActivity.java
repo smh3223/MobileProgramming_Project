@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.teamproject.Board.Board;
+import com.example.teamproject.Board.MyAdapter;
+import com.example.teamproject.Board.WriteActivity;
 import com.example.teamproject.R;
 import com.example.teamproject.WriteBoard;
 import com.google.firebase.database.ChildEventListener;
@@ -28,7 +31,7 @@ public class BoardActivity extends AppCompatActivity {
     ArrayList<Board> board1 = new ArrayList<Board>();
     ArrayDeque<Board> board2 = new ArrayDeque<Board>();
 
-    //게시글 작성 시 제목 / 내용 / 등록 버튼
+
 
 
     // 게시글 작성 프래그먼트 호출
@@ -117,7 +120,7 @@ public class BoardActivity extends AppCompatActivity {
     {
         Intent myIntent = new Intent(getApplicationContext(), WriteActivity.class);
 
-        startActivity(myIntent);
+        startActivityForResult(myIntent,0);
     }
 
 }
